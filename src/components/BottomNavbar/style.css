@@ -1,0 +1,18 @@
+.nav-tabs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-content: center;
+  justify-items: center;
+  padding: 10px 0;
+}
+
+.nav-tabs .tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-tabs .tab span {
+  display: flex;
+  margin-top: 11px;
+}

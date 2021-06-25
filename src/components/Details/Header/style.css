@@ -1,0 +1,31 @@
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+  margin-bottom: 20px;
+  padding: 0 16px;
+}
+
+.details-icons {
+  display: flex;
+}
+
+.top-taps .tab {
+  display: flex;
+  align-items: center;
+}
+
+.top-taps .border {
+  border-left: 1px solid #cbd6e0;
+  height: 22px;
+}
+
+.top-taps .tab p {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.top-taps .tab i {
+  color: #071827;
+}

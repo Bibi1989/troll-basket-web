@@ -1,0 +1,29 @@
+.ui-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  background-color: #edf2f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.ui-title h1 {
+  margin: 0;
+  padding: 0 20px;
+}
+.ui-btn {
+  height: 31px;
+  border-radius: 4px;
+  padding: 8px 19px;
+  outline: none;
+  border: none;
+}
+.ui-category-icon {
+  height: 48px;
+  width: 48px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

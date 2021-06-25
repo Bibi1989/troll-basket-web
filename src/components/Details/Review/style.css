@@ -1,0 +1,45 @@
+.product-desc,
+.review-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.review-title p {
+  margin: 0;
+}
+
+.review-title span {
+  margin: 0;
+  color: #227eff;
+  font-size: 14px;
+}
+
+.review-desc {
+  padding: 16px;
+}
+
+.review-user {
+  padding: 16px;
+}
+
+.review-btn {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+
+.review-btn button {
+  padding: 12px 19px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+}
+
+.review-btn button:first-child {
+  background-color: #227eff;
+  color: white;
+}

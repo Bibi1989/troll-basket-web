@@ -1,0 +1,39 @@
+.product {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 26px;
+}
+
+.product .product-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.product .product-card .image img {
+  width: 100%;
+}
+
+.product-card p,
+.product-card h3 {
+  margin: 0;
+}
+
+.product-card p {
+  font-size: 12px;
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 15px;
+  letter-spacing: 0.01em;
+  color: #718596;
+}
+
+.product-card span {
+  font-size: 12px;
+}
+
+.product .product-card h3 {
+  font-size: 14px;
+}

@@ -1,0 +1,32 @@
+.detail-image {
+  text-align: center;
+  overflow-y: hidden;
+}
+
+.detail-content {
+  text-align: left;
+  overflow-y: hidden;
+  margin-top: 30px;
+  padding: 0 16px;
+}
+
+.detail-content p, .detail-content h3 {
+  margin: 0;
+}
+
+.detail-content p {
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  color: #627483;
+  width: 80%;
+}
+
+.detail-image img {
+  height: 240px;
+  width: 470px;
+  object-position: center;
+  object-fit: cover;
+}

@@ -1,0 +1,16 @@
+.home {
+  /* padding: 16px; */
+  position: relative;
+}
+
+.home-content {
+  padding: 0 16px;
+}
+
+.bottom-nav {
+  position: sticky;
+  max-width: 500px;
+  width: 100%;
+  bottom: 0;
+  background-color: white;
+}

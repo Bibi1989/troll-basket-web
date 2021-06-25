@@ -1,0 +1,19 @@
+.search {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 16px;
+  background-color: #EDF2F7;
+  border-radius: 4px;
+}
+
+.search .fa-search {
+  color: #2E4457;
+}
+
+.search-input {
+  outline: none;
+  border: none;
+  width: 100%;
+  background-color: transparent;
+}
