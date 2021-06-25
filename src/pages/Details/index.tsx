@@ -11,8 +11,9 @@ import Image from "components/Details/Image";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getProduct } from "redux/products/action";
+import { addCartItem, getProduct } from "redux/products/action";
 import Review from "components/Details/Review";
+import AddToCart from "components/AddToCart";
 
 const DetailsPage = () => {
   const product = useSelector(({ products: { product } }: any) => product);
@@ -25,13 +26,20 @@ const DetailsPage = () => {
     dispatch(getProduct(id));
   }, []);
 
-  console.log(product);
+  const handleAddToCart = () => {
+    const manipulatedProduct = {
+      ...product,
+      price: parseInt(product?.price.split("-")[0].trim().split(",").join("")),
+    };
+    dispatch(addCartItem(manipulatedProduct));
+  };
 
   return (
     <div className="home">
       <Header />
       <Image {...product} />
       <Review />
+      <AddToCart {...product} onClick={handleAddToCart} />
     </div>
   );
 };

@@ -7,11 +7,31 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  position: relative;
 }
+
+.ui-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  height: 16px;
+  width: 16px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #EE6F44;
+}
+
 .ui-title h1 {
   margin: 0;
   padding: 0 20px;
 }
+
 .ui-btn {
   height: 31px;
   border-radius: 4px;

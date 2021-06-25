@@ -1,0 +1,33 @@
+.recently-component{
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+.recently-component .header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.recently-component .header span:last-child{
+  color: #227EFF;
+  cursor: pointer;
+}
+.recently-component .content{
+  display: flex;
+  justify-content: space-between;
+}
+.recently-component .body{
+  display: flex;
+  flex-direction: column;
+  width: 101.57px;
+}
+.recently-component .body p{
+  margin-top: 10px;
+}
+.recently-component .body * {
+  margin: 0px;
+  padding: 0px;
+}
+.recent-image{
+  width: 101.57px;
+  height: 98px;
+}

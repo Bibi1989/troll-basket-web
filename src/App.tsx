@@ -7,6 +7,7 @@ import { getProducts } from "redux/products/action";
 
 import "./App.css";
 import DetailsPage from "pages/Details";
+import CartsPage from "pages/Carts";
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ const App: React.FC = () => {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/detail/:id" component={DetailsPage} />
+          <Route path="/cart" component={CartsPage} />
         </Switch>
       </BrowserRouter>
     </div>

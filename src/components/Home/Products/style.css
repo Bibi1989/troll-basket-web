@@ -9,6 +9,7 @@
 .product .product-card {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .product .product-card .image img {

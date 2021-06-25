@@ -6,3 +6,25 @@
   margin: auto;
   overflow-y: auto;
 }
+
+.cart-comp{
+  background-color: #f9fafc;
+}
+
+.main-app {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px 16px;
+}
+
+.cart-card {
+  background-color: #ffffff;
+  padding: 8px 16px 0;
+  margin: 16px 0;
+  padding-top: 0;
+  border-radius: 4px;
+}
+
+.cart-card:last-child {
+  margin-bottom: 0;
+}

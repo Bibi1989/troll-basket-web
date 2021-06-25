@@ -1,10 +1,18 @@
 import { AnyAction } from "redux";
-import { ADD_TO_CAART, GET_ALL_PRODUCTS, GET_CART, GET_PRODUCT } from "./types";
+import {
+  ADD_TO_CAART,
+  DELETE_CART,
+  GET_ALL_PRODUCTS,
+  GET_CART,
+  GET_PRODUCT,
+  IS_IN_CART,
+} from "./types";
 
 const initialState = {
   products: [],
   product: null,
   carts: [],
+  isInCart: false,
 };
 
 const productsReducer = (state = initialState, action: AnyAction) => {
@@ -28,6 +36,16 @@ const productsReducer = (state = initialState, action: AnyAction) => {
       return {
         ...state,
         carts: state.carts.concat(action.payload),
+      };
+    case IS_IN_CART:
+      return {
+        ...state,
+        isInCart: action.payload,
+      };
+    case DELETE_CART:
+      return {
+        ...state,
+        carts: action.payload,
       };
 
     default:

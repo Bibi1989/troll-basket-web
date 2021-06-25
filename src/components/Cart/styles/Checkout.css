@@ -1,0 +1,23 @@
+.checkout-component .checkout {
+  height: 56px;
+  background-color: #227eff;
+  display: flex;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.checkout-component > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.checkout-component span {
+  font-size: 14px;
+}
+.checkout-component .total {
+  font-size: 14px;
+  font-weight: bold;
+  color: #212c3d;
+}
