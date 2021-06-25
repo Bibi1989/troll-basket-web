@@ -7,6 +7,7 @@ export type ProductsProps = {
   name: string;
   description: string;
   image: string;
+  quantity?: any;
   price: string;
   location: string;
   stock: number;

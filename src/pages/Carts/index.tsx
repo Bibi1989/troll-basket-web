@@ -5,22 +5,27 @@ import RecentlyViewed from "components/Cart/RecentlyViewed";
 import { useDispatch, useSelector } from "react-redux";
 import Header from "components/Details/Header";
 import { ProductsProps } from "components/Home/Products/Item/Card";
-import { deleteCartItem } from "redux/products/action";
+import { decrement, deleteCartItem, increment } from "redux/products/action";
 
 const CartsPage = () => {
-  // list of items to checkout
-  const [subtotal, setSubtotal] = useState(100);
-  const [total, setTotal] = useState(200);
-
   const dispatch = useDispatch();
 
   const carts = useSelector(({ products: { carts } }: any) => carts);
 
-  // sets the list of items to checkout
+  console.log(carts);
 
-  const handlePlus = () => {};
+  const total = carts?.reduce(
+    (acc: number, cart: any) => (acc += cart.price * cart.quantity),
+    0
+  );
 
-  const handleMinus = () => {};
+  const handlePlus = (id: string) => {
+    dispatch(increment(id));
+  };
+
+  const handleMinus = (id: string) => {
+    dispatch(decrement(id));
+  };
 
   const handleDelete = (id: string) => {
     dispatch(deleteCartItem(id));
@@ -41,7 +46,7 @@ const CartsPage = () => {
           />
         ))}
       </div>
-      <Checkout subtotal={subtotal} total={total} />
+      <Checkout subtotal={total} total={total} />
       <RecentlyViewed />
     </div>
   );

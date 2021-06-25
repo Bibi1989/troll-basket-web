@@ -30,6 +30,7 @@ const DetailsPage = () => {
     const manipulatedProduct = {
       ...product,
       price: parseInt(product?.price.split("-")[0].trim().split(",").join("")),
+      quantity: 1
     };
     dispatch(addCartItem(manipulatedProduct));
   };

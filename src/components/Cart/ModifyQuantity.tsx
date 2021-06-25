@@ -11,8 +11,8 @@ type Props = {
   name: string;
   price: number;
   quantity?: string;
-  handleMinus: () => void;
-  handlePlus: () => void;
+  handleMinus: (id: string) => void;
+  handlePlus: (id: string) => void;
   handleDelete: (id: string) => void;
 };
 
@@ -45,14 +45,14 @@ const ModifyQuantity: React.FC<Props> = ({
         </div>
         <div className="modify-quantity-quantity">
           <img
-            onClick={handleMinus}
+            onClick={() => handleMinus(id)}
             className="quantity"
             src={MinusIcon}
             alt="Minus icon"
           />
           <span className="quantity">{quantity}</span>
           <img
-            onClick={handlePlus}
+            onClick={() => handlePlus(id)}
             className="quantity"
             src={PlusIcon}
             alt="Plus icon"

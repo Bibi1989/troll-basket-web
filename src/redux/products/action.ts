@@ -4,10 +4,12 @@ import { products } from "mockData/data";
 import { Dispatch } from "redux";
 import {
   ADD_TO_CAART,
+  DECREMENT_CART,
   DELETE_CART,
   GET_ALL_PRODUCTS,
   GET_CART,
   GET_PRODUCT,
+  INCREMENT_CART,
   IS_IN_CART,
 } from "./types";
 
@@ -62,6 +64,38 @@ export const deleteCartItem =
       );
       console.log(filteredCart);
       dispatch({ type: DELETE_CART, payload: filteredCart });
+    } catch (error) {
+      throw error;
+    }
+  };
+
+export const increment =
+  (id: string) => async (dispatch: Dispatch, getState: any) => {
+    try {
+      console.log(id);
+      const carts = getState()?.products?.carts?.map((crt: ProductsProps) => {
+        if (id === crt.id && crt.quantity <= 30) {
+          crt.quantity += 1;
+        }
+        return crt;
+      });
+      dispatch({ type: INCREMENT_CART, payload: carts });
+    } catch (error) {
+      throw error;
+    }
+  };
+
+export const decrement =
+  (id: string) => async (dispatch: Dispatch, getState: any) => {
+    try {
+      console.log(id);
+      const carts = getState()?.products?.carts?.map((crt: ProductsProps) => {
+        if (id === crt.id && crt.quantity >= 1) {
+          crt.quantity -= 1;
+        }
+        return crt;
+      });
+      dispatch({ type: DECREMENT_CART, payload: carts });
     } catch (error) {
       throw error;
     }

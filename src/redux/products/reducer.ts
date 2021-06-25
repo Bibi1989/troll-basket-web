@@ -1,10 +1,12 @@
 import { AnyAction } from "redux";
 import {
   ADD_TO_CAART,
+  DECREMENT_CART,
   DELETE_CART,
   GET_ALL_PRODUCTS,
   GET_CART,
   GET_PRODUCT,
+  INCREMENT_CART,
   IS_IN_CART,
 } from "./types";
 
@@ -43,6 +45,16 @@ const productsReducer = (state = initialState, action: AnyAction) => {
         isInCart: action.payload,
       };
     case DELETE_CART:
+      return {
+        ...state,
+        carts: action.payload,
+      };
+    case INCREMENT_CART:
+      return {
+        ...state,
+        carts: action.payload,
+      };
+    case DECREMENT_CART:
       return {
         ...state,
         carts: action.payload,
