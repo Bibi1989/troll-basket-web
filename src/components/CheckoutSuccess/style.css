@@ -1,0 +1,23 @@
+.checkout-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #207bfa;
+  height: 100vh;
+  padding: 50px 16px;
+}
+.checkout-screen .checkout-content {
+    color: white;
+    text-align: center;
+}
+
+.checkout-screen button {
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  padding: 16px 0;
+  width: 100%;
+  background-color: white;
+  color: #207bfa;
+}
