@@ -14,9 +14,13 @@ import { useParams } from "react-router-dom";
 import { addCartItem, getProduct } from "redux/products/action";
 import Review from "components/Details/Review";
 import AddToCart from "components/AddToCart";
+import Toastr from "ui/Toastr";
+import { useState } from "react";
 
 const DetailsPage = () => {
   const product = useSelector(({ products: { product } }: any) => product);
+
+  const [visible, setVisible] = useState(false);
 
   const { id } = useParams<any>();
 
@@ -30,13 +34,22 @@ const DetailsPage = () => {
     const manipulatedProduct = {
       ...product,
       price: parseInt(product?.price.split("-")[0].trim().split(",").join("")),
-      quantity: 1
+      quantity: 1,
     };
     dispatch(addCartItem(manipulatedProduct));
+    setVisible(true);
   };
 
   return (
     <div className="home">
+      <Toastr
+        visible={visible}
+        backgroundColor="#D3FDE9"
+        color="#023B20"
+        borderColor="#93ECC1"
+        onClose={() => setVisible(false)}
+        message="Item added to cart successfully"
+      />
       <Header />
       <Image {...product} />
       <Review />
