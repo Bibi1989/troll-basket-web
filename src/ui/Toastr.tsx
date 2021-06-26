@@ -19,15 +19,13 @@ const Toastr: React.FC<Props> = ({
   onClose,
   visible,
 }) => {
-  console.log(visible);
-
   return (
     <>
       {
         <div
           className={visible ? "ui-show" : "ui-hide"}
           style={{
-            display: visible ? 'flex' : 'none',
+            display: visible ? "flex" : "none",
             backgroundColor,
             border: `1px solid ${borderColor}`,
             color,

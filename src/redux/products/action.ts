@@ -65,7 +65,6 @@ export const deleteCartItem =
       const filteredCart = getState()?.products?.carts?.filter(
         (crt: ProductsProps) => crt.id !== id
       );
-      console.log(filteredCart);
       dispatch({ type: DELETE_CART, payload: filteredCart });
     } catch (error) {
       throw error;
@@ -76,7 +75,6 @@ export const searchItem =
   (name: string) => async (dispatch: Dispatch, getState: any) => {
     try {
       if (name) {
-        console.log(name);
         const filteredCart = getState()?.products?.products?.filter(
           (crt: ProductsProps) => {
             return returnBoolean(crt, name);
@@ -95,7 +93,6 @@ export const searchItem =
 export const increment =
   (id: string) => async (dispatch: Dispatch, getState: any) => {
     try {
-      console.log(id);
       const carts = getState()?.products?.carts?.map((crt: ProductsProps) => {
         if (id === crt.id && crt.quantity <= 30) {
           crt.quantity += 1;
@@ -111,7 +108,6 @@ export const increment =
 export const decrement =
   (id: string) => async (dispatch: Dispatch, getState: any) => {
     try {
-      console.log(id);
       const carts = getState()?.products?.carts?.map((crt: ProductsProps) => {
         if (id === crt.id && crt.quantity >= 1) {
           crt.quantity -= 1;

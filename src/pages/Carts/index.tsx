@@ -12,8 +12,6 @@ const CartsPage = () => {
 
   const carts = useSelector(({ products: { carts } }: any) => carts);
 
-  console.log(carts);
-
   const total = carts?.reduce(
     (acc: number, cart: any) => (acc += cart.price * cart.quantity),
     0
