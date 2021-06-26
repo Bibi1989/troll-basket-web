@@ -8,6 +8,7 @@ import {
   GET_PRODUCT,
   INCREMENT_CART,
   IS_IN_CART,
+  SEARCH,
 } from "./types";
 
 const initialState = {
@@ -48,6 +49,11 @@ const productsReducer = (state = initialState, action: AnyAction) => {
       return {
         ...state,
         carts: action.payload,
+      };
+    case SEARCH:
+      return {
+        ...state,
+        products: action.payload,
       };
     case INCREMENT_CART:
       return {

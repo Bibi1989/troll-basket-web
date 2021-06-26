@@ -11,7 +11,11 @@ import {
   GET_PRODUCT,
   INCREMENT_CART,
   IS_IN_CART,
+  SEARCH,
 } from "./types";
+
+const returnBoolean = (crt: ProductsProps, name: string) =>
+  crt.name.toLowerCase().includes(name.toLowerCase());
 
 export const getProducts = () => async (dispatch: Dispatch) => {
   try {
@@ -58,12 +62,31 @@ export const addCartItem =
 export const deleteCartItem =
   (id: string) => async (dispatch: Dispatch, getState: any) => {
     try {
-      console.log(id);
       const filteredCart = getState()?.products?.carts?.filter(
         (crt: ProductsProps) => crt.id !== id
       );
       console.log(filteredCart);
       dispatch({ type: DELETE_CART, payload: filteredCart });
+    } catch (error) {
+      throw error;
+    }
+  };
+
+export const searchItem =
+  (name: string) => async (dispatch: Dispatch, getState: any) => {
+    try {
+      if (name) {
+        console.log(name);
+        const filteredCart = getState()?.products?.products?.filter(
+          (crt: ProductsProps) => {
+            return returnBoolean(crt, name);
+          }
+        );
+        dispatch({ type: SEARCH, payload: filteredCart });
+        return;
+      } else {
+        dispatch({ type: SEARCH, payload: products });
+      }
     } catch (error) {
       throw error;
     }

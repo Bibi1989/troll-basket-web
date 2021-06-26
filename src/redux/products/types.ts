@@ -4,5 +4,6 @@ export const ADD_TO_CAART = "ADD_TO_CAART";
 export const GET_CART = "GET_CART";
 export const IS_IN_CART = "IS_IN_CART";
 export const DELETE_CART = "DELETE_CART";
+export const SEARCH = "SEARCH";
 export const INCREMENT_CART = "INCREMENT_CART";
 export const DECREMENT_CART = "DECREMENT_CART";

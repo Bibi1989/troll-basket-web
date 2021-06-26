@@ -1,6 +1,6 @@
 .category {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-evenly;
   margin-top: 26px;
 }
